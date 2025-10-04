@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ASFI Firm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>ASFI Firm</h1>
+                <p class="tagline">Premium Dairy Excellence</p>
+            </div>
+            <nav class="navigation">
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Fresh dairy products delivered to your doorstep with cash on delivery</p>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Summary -->
+    <div class="cart-summary" id="cartSummary">
+        <div class="container">
+            <div class="cart-info">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+                <span class="cart-text">items in cart</span>
+                <span class="cart-total">Total: ৳<span id="cartTotal">0</span></span>
+            </div>
+            <button class="btn btn-primary btn-sm" id="viewCartBtn">View Cart</button>
+        </div>
+    </div>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="milk">Milk</button>
+                <button class="filter-btn" data-category="dairy">Dairy Products</button>
+                <button class="filter-btn" data-category="cheese">Cheese</button>
+                <button class="filter-btn" data-category="organic">Organic</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                
+                <!-- Fresh Milk Products -->
+                <div class="product-card" data-category="milk">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Fresh Whole Milk">
+                        <div class="product-badge">Fresh</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Whole Milk</h3>
+                        <p>Pure cow milk, 3.5% fat content. Rich in calcium and vitamins.</p>
+                        <div class="product-details">
+                            <span class="volume">1 Liter</span>
+                            <span class="quality">Grade A</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳85</span>
+                            <span class="original-price">৳95</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="milk-1" data-name="Fresh Whole Milk" data-price="85" data-image="https://images.unsplash.com/photo-1550583724-b2692b85b150">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="milk">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80" alt="Low Fat Milk">
+                    </div>
+                    <div class="product-info">
+                        <h3>Low Fat Milk</h3>
+                        <p>Healthy option with 1.5% fat content. Perfect for weight watchers.</p>
+                        <div class="product-details">
+                            <span class="volume">1 Liter</span>
+                            <span class="quality">Grade A</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳80</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="milk-2" data-name="Low Fat Milk" data-price="80" data-image="https://images.unsplash.com/photo-1563636619-e9143da7973b">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="milk organic">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544378730-6f3a4b001e1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Organic Milk">
+                        <div class="product-badge organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Whole Milk</h3>
+                        <p>100% organic milk from grass-fed cows. No chemicals or hormones.</p>
+                        <div class="product-details">
+                            <span class="volume">1 Liter</span>
+                            <span class="quality">Organic</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳120</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="milk-3" data-name="Organic Whole Milk" data-price="120" data-image="https://images.unsplash.com/photo-1544378730-6f3a4b001e1b">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dairy Products -->
+                <div class="product-card" data-category="dairy">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1226&q=80" alt="Greek Yogurt">
+                        <div class="product-badge">Popular</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Greek Yogurt</h3>
+                        <p>Thick, creamy yogurt with probiotics. Great for breakfast and snacks.</p>
+                        <div class="product-details">
+                            <span class="volume">500g</span>
+                            <span class="quality">Probiotic</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳150</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="dairy-1" data-name="Greek Yogurt" data-price="150" data-image="https://images.unsplash.com/photo-1488477181946-6428a0291777">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="dairy">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551823491-6c748d1f6250?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Fresh Butter">
+                    </div>
+                    <div class="product-info">
+                        <h3>Farm Fresh Butter</h3>
+                        <p>Churned daily from fresh cream. Perfect for cooking and baking.</p>
+                        <div class="product-details">
+                            <span class="volume">250g</span>
+                            <span class="quality">Unsalted</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳180</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="dairy-2" data-name="Farm Fresh Butter" data-price="180" data-image="https://images.unsplash.com/photo-1551823491-6c748d1f6250">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="dairy">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Heavy Cream">
+                    </div>
+                    <div class="product-info">
+                        <h3>Heavy Cream</h3>
+                        <p>Rich cooking cream for desserts and coffee. 35% fat content.</p>
+                        <div class="product-details">
+                            <span class="volume">200ml</span>
+                            <span class="quality">Grade A</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳95</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="dairy-3" data-name="Heavy Cream" data-price="95" data-image="https://images.unsplash.com/photo-1628088062854-d1870b4553da">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cheese Products -->
+                <div class="product-card" data-category="cheese">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80" alt="Cottage Cheese">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Cottage Cheese</h3>
+                        <p>Soft, mild cheese perfect for salads and cooking. High in protein.</p>
+                        <div class="product-details">
+                            <span class="volume">300g</span>
+                            <span class="quality">Fresh</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳200</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="cheese-1" data-name="Fresh Cottage Cheese" data-price="200" data-image="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cheese">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Mozzarella">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Mozzarella</h3>
+                        <p>Creamy mozzarella cheese, perfect for pizza and caprese salad.</p>
+                        <div class="product-details">
+                            <span class="volume">200g</span>
+                            <span class="quality">Fresh</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">৳250</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-id="cheese-2" data-name="Fresh Mozzarella" data-price="250" data-image="https://images.unsplash.com/photo-1452195100486-9cc805987862">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close" id="closeCart">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="cart-items" id="cartItems">
+                    <p class="empty-cart">Your cart is empty</p>
+                </div>
+                <div class="cart-summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span>৳<span id="modalSubtotal">0</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee:</span>
+                        <span>৳<span id="deliveryFee">50</span></span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span>৳<span id="modalTotal">0</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="continueShopping">Continue Shopping</button>
+                <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <span class="close" id="closeCheckout">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form class="checkout-form" id="checkoutForm">
+                    <div class="form-section">
+                        <h3>Delivery Information</h3>
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" name="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" placeholder="+880 1700-000000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryAddress">Delivery Address *</label>
+                            <textarea id="deliveryAddress" name="deliveryAddress" rows="3" placeholder="House/Flat No, Road, Area, City" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="deliveryTime">Preferred Delivery Time</label>
+                            <select id="deliveryTime" name="deliveryTime">
+                                <option value="morning">Morning (8 AM - 12 PM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                <option value="evening">Evening (5 PM - 8 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <span>💰 Cash on Delivery</span>
+                                <p>Pay when you receive your order</p>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="bkash">
+                                <span>📱 bKash</span>
+                                <p>Mobile payment via bKash</p>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="checkoutItems"></div>
+                        <div class="checkout-total">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span>৳<span id="checkoutSubtotal">0</span></span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery:</span>
+                                <span>৳<span id="checkoutDelivery">50</span></span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total Amount:</span>
+                                <span>৳<span id="checkoutTotal">0</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="backToCart">Back to Cart</button>
+                <button class="btn btn-primary" id="placeOrderBtn">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="success-icon">✅</div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your order. We will contact you shortly to confirm delivery details.</p>
+                <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+                <p>Your fresh dairy products will be delivered within 24 hours.</p>
+                <button class="btn btn-primary" id="closeSuccess">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delivery Information -->
+    <section class="delivery-info">
+        <div class="container">
+            <h2>Delivery Information</h2>
+            <div class="delivery-grid">
+                <div class="delivery-item">
+                    <div class="delivery-icon">🚚</div>
+                    <h3>Free Delivery</h3>
+                    <p>Free delivery on orders above ৳500</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="delivery-icon">⏰</div>
+                    <h3>Same Day Delivery</h3>
+                    <p>Orders before 2 PM delivered same day</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="delivery-icon">💰</div>
+                    <h3>Cash on Delivery</h3>
+                    <p>Pay when you receive your order</p>
+                </div>
+                <div class="delivery-item">
+                    <div class="delivery-icon">❄️</div>
+                    <h3>Fresh Guarantee</h3>
+                    <p>100% fresh products or money back</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ASFI Firm</h3>
+                    <p>Your trusted source for fresh, quality dairy products in Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="WhatsApp">📱</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="shop.html">Fresh Milk</a></li>
+                        <li><a href="shop.html">Yogurt</a></li>
+                        <li><a href="shop.html">Cheese</a></li>
+                        <li><a href="shop.html">Butter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +880 1700-000000</p>
+                    <p>📧 info@asfifirm.com</p>
+                    <p>📍 Dhaka, Bangladesh</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ASFI Firm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
